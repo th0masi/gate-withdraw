@@ -43,6 +43,7 @@ def control_fee():
                                 f' for {config.MAX_FEE_MEME_GAS} ${token_code}')
 
         except Exception as e:
+            logger.error(f'Cant get current fee, error:  {e}')
             continue
 
         logger.info(f'Sleep 120 sec...')
