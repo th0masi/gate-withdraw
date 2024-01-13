@@ -1,0 +1,7 @@
+API_KEY = ''
+API_SECRET = ''
+
+MAX_FEE_MEME_GAS = 150
+
+AMOUNT = [75, 90]
+DELAY = [10, 200]
