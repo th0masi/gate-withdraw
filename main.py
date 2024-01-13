@@ -33,7 +33,7 @@ def control_fee():
 
             if token_code in fees:
                 meme_eth_info = fees[token_code]
-                fee = meme_eth_info.get('withdraw').get('fee')
+                fee = meme_eth_info.get('networks').get('ETH').get('withdraw').get('fee')
 
                 if int(fee) <= config.MAX_FEE_MEME_GAS:
                     logger.success(f'Current fee: {fee} ${token_code}, go withdraw!')
