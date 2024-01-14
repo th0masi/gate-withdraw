@@ -38,9 +38,9 @@ def control_fee():
                 fee_1 = meme_eth_info.get('withdraw').get('fee')
                 fee_2 = meme_eth_info.get('info').get('withdraw_fix_on_chains').get('ETH')
 
-                if int(fee) <= max and int(fee_1) <= max and int(fee_2) <= max:
+                if float(fee) <= max and float(fee_1) <= max and float(fee_2) <= max:
                     logger.success(f'Current fee: {fee} ${token_code}, go withdraw!')
-                    return int(fee)
+                    return float(fee)
                 else:
                     logger.info(f'Current fee: {fee} ${token_code}, wait'
                                 f' for {max} ${token_code}')
